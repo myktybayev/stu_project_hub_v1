@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:stu_project_hub/screens/navigation/main_navigation_screen.dart';
-import 'config/theme.dart';
-// TODO: AppColors-ты config/colors.dart арқылы қолдану
+import 'package:stu_project_hub/core/theme/theme.dart';
+import 'package:stu_project_hub/navigation/main_navigation_screen.dart';
+import 'package:stu_project_hub/di/service_locator.dart';
 
 void main() {
+  setupLocator();
   runApp(const MyApp());
 }
 
