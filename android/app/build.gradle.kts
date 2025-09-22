@@ -42,3 +42,21 @@ android {
 flutter {
     source = "../.."
 }
+
+// Force AndroidX libraries and exclude old support libraries
+configurations.all {
+    resolutionStrategy {
+        // Force AndroidX versions
+        force("androidx.annotation:annotation:1.6.0")
+        force("androidx.core:core:1.10.1")
+        force("androidx.fragment:fragment:1.6.1")
+        force("androidx.collection:collection:1.2.0")
+        force("androidx.palette:palette:1.0.0")
+        force("androidx.appcompat:appcompat:1.6.1")
+        force("androidx.recyclerview:recyclerview:1.3.1")
+        force("androidx.cardview:cardview:1.0.0")
+    }
+    
+    // Exclude old support libraries to prevent conflicts
+    exclude(group = "com.android.support")
+}
